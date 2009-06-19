@@ -10,7 +10,8 @@ using NUnit.Framework;
 namespace Rack.Net.Tests
 {
 	[TestFixture]
-	public class Tests
+	public class 
+		 Tests
 	{
 		public void Approve(string html)
 		{
@@ -35,6 +36,7 @@ namespace Rack.Net.Tests
 			environment[HTTPVariables.REQUEST_METHOD] = "GET";
 			environment[HTTPVariables.SERVER_NAME] = "TOMCAT";
 			environment[HTTPVariables.SERVER_PORT] = "8008";
+			environment["ALL_HTTP"] = new System.String[]{"a","b"};
 			return environment;
 		}
 
@@ -67,7 +69,7 @@ namespace Rack.Net.Tests
 		}
 	}
 
-	public class DicationaryWriter
+	public class DictionaryWriter
 	{
 		public static string Write(IDictionary<string, object> dicationary, Func<object, object, string> keyValueFormatter)
 		{

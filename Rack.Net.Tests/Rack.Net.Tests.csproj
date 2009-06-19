@@ -31,14 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApprovalTests, Version=0.0.3.23, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Common\ApprovalTests.dll</HintPath>
-    </Reference>
-    <Reference Include="ApprovalTests.Extensions, Version=0.0.3.23, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Common\ApprovalTests.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Common\nunit.framework.dll</HintPath>
@@ -69,6 +61,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApprovalTests\ApprovalTests\ApprovalTests.csproj">
+      <Project>{F70C9A76-F797-4167-8178-14821F8634BC}</Project>
+      <Name>ApprovalTests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rack.Net\Rack.Net.csproj">
       <Project>{4A372718-1DB1-4700-A2B7-0EF221AE4D3C}</Project>
       <Name>Rack.Net</Name>

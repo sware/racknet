@@ -1,38 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Linq;
+using System.Text;
 using System.Web;
-using System.Web.UI;
 using Rack.Net.Tests;
 
-namespace AspAdapter
+
+namespace App_Code
 {
-
-public class RackHandler : IHttpHandler
-{
-	public void ProcessRequest(HttpContext context)
+	
+	public class RackHandler : IHttpHandler
 	{
-		context.Response.Output.Write(new MammogramRack().Call(ConvertToDicationary(context.Request.Params)).Body);
-	}
+		#region IHttpHandler Members
 
-	public bool IsReusable
-	{
-		get { return true; }
-	}
-
-	private IDictionary<string, object> ConvertToDicationary(NameValueCollection collection)
-	{
-		Dictionary<string, object> d = new Dictionary<string, object>();
-
-		foreach (string key in collection.Keys)
+		public void ProcessRequest(HttpContext context)
 		{
-			d.Add(key, collection.GetValues(key));
+			context.Response.Output.Write(new MammogramRack().Call(ConvertToDicationary(context.Request.Params)).Body);
 		}
 
-		return d;
-	}
+		public bool IsReusable
+		{
+			get { return true; }
+		}
 
-	
-}
+		#endregion
+
+		private IDictionary<string, object> ConvertToDicationary(NameValueCollection collection)
+		{
+			var d = new Dictionary<string, object>();
+
+			foreach (string key in collection.Keys)
+			{
+				d.Add(key, collection.GetValues(key));
+			}
+
+			return d;
+		}
+	}
 }

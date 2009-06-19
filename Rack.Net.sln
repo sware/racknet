@@ -8,7 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AspAdapter", "AspAdapter\", "{A5FB5D09-61CA-4AAB-9A89-4C97759E1898}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFramework = "3.5"
-		ProjectReferences = "{6023BC6F-6DFB-4A5F-9D47-A14D9A184586}|Rack.Net.Tests.dll;{4A372718-1DB1-4700-A2B7-0EF221AE4D3C}|Rack.Net.dll;"
+		ProjectReferences = "{6023BC6F-6DFB-4A5F-9D47-A14D9A184586}|Rack.Net.Tests.dll;{4A372718-1DB1-4700-A2B7-0EF221AE4D3C}|Rack.Net.dll;{F70C9A76-F797-4167-8178-14821F8634BC}|ApprovalTests.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/AspAdapter"
 		Debug.AspNetCompiler.PhysicalPath = "AspAdapter\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AspAdapter\"
@@ -26,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AspAdapter", "AspAdapter\",
 		VWDPort = "51614"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalTests", "ApprovalTests\ApprovalTests\ApprovalTests.csproj", "{F70C9A76-F797-4167-8178-14821F8634BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A5FB5D09-61CA-4AAB-9A89-4C97759E1898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5FB5D09-61CA-4AAB-9A89-4C97759E1898}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5FB5D09-61CA-4AAB-9A89-4C97759E1898}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F70C9A76-F797-4167-8178-14821F8634BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70C9A76-F797-4167-8178-14821F8634BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70C9A76-F797-4167-8178-14821F8634BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70C9A76-F797-4167-8178-14821F8634BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

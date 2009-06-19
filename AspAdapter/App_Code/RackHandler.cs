@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Text;
+using System.Configuration;
+using System.Reflection;
 using System.Web;
+using Rack.Net.Core;
 using Rack.Net.Tests;
-
 
 namespace App_Code
 {
-	
 	public class RackHandler : IHttpHandler
 	{
-		#region IHttpHandler Members
+		private static readonly IRack rackApp = LoadMainRackApp();
+
+		private static IRack LoadMainRackApp()
+		{
+			var className = ConfigurationSettings.AppSettings.GetValues("MainRackApplication")[0];
+			var rackClass = System.Type.GetType(className);
+			return (IRack) System.Activator.CreateInstance(rackClass);
+		}
+
 
 		public void ProcessRequest(HttpContext context)
 		{
-			context.Response.Output.Write(new MammogramRack().Call(ConvertToDicationary(context.Request.Params)).Body);
+			RackHandleRequest(context.Request, context.Response);
 		}
 
 		public bool IsReusable
@@ -23,9 +31,35 @@ namespace App_Code
 			get { return true; }
 		}
 
-		#endregion
+		public static void RackHandleRequest(HttpRequest request, HttpResponse response)
+		{
+			MyRackImage.BasePath = "Rack.Net.Tests/";
 
-		private IDictionary<string, object> ConvertToDicationary(NameValueCollection collection)
+			IResponse call = rackApp.Call(ConvertToDicationary(request.Params));
+			TransferHeader(response, call.Headers);
+			if (call.Body.IsString())
+			{
+				response.Write(call.Body.ToString());
+			}
+			else
+			{
+				response.BinaryWrite(call.Body.ToBytes());
+			}
+		}
+
+		private static void TransferHeader(HttpResponse to, IDictionary<string, string> from)
+		{
+			foreach (string k in from.Keys)
+			{
+				if (from.ContainsKey(k))
+				{
+					to.AddHeader(k, from[k]);
+				}
+			}
+		}
+
+
+		private static IDictionary<string, object> ConvertToDicationary(NameValueCollection collection)
 		{
 			var d = new Dictionary<string, object>();
 

@@ -29,6 +29,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AspAdapter", "AspAdapter\",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalTests", "ApprovalTests\ApprovalTests\ApprovalTests.csproj", "{F70C9A76-F797-4167-8178-14821F8634BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rack.Net.Utilities", "Rack.Net.Utilities\Rack.Net.Utilities.csproj", "{BFBCD024-E763-460A-8F36-7D262ED8746A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rack.Net.Utilities.Tests", "Rack.Net.Utilities.Tests\Rack.Net.Utilities.Tests.csproj", "{B06FED14-99D1-4A8C-9E9B-78789849B6CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{F70C9A76-F797-4167-8178-14821F8634BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F70C9A76-F797-4167-8178-14821F8634BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F70C9A76-F797-4167-8178-14821F8634BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBCD024-E763-460A-8F36-7D262ED8746A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBCD024-E763-460A-8F36-7D262ED8746A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBCD024-E763-460A-8F36-7D262ED8746A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBCD024-E763-460A-8F36-7D262ED8746A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06FED14-99D1-4A8C-9E9B-78789849B6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06FED14-99D1-4A8C-9E9B-78789849B6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06FED14-99D1-4A8C-9E9B-78789849B6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06FED14-99D1-4A8C-9E9B-78789849B6CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

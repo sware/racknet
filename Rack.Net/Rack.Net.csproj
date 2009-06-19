@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IApplication.cs" />
-    <Compile Include="IResponse.cs" />
+    <Compile Include="Core\IRack.cs" />
+    <Compile Include="Core\IResponse.cs" />
+    <Compile Include="Core\ResponseBody.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Response.cs" />
-    <Compile Include="ResponseBody.cs" />
+    <Compile Include="Core\Common\Response.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

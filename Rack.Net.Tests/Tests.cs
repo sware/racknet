@@ -6,6 +6,7 @@ using ApprovalTests.Namers;
 using ApprovalTests.Reporters;
 using ApprovalTests.Writers;
 using NUnit.Framework;
+using Rack.Net.Core;
 
 namespace Rack.Net.Tests
 {

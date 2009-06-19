@@ -1,11 +1,11 @@
 using System.Text;
 
-namespace Rack.Net
+namespace Rack.Net.Core
 {
 	public class ResponseBody
 	{
-		private readonly byte[] bodyAsBytes;
-		private readonly string stringBody;
+		protected readonly byte[] bodyAsBytes;
+		protected readonly string stringBody;
 
 		public ResponseBody(string body)
 		{
@@ -17,14 +17,14 @@ namespace Rack.Net
 			bodyAsBytes = body;
 		}
 
-		public byte[] ToBytes()
+		public virtual byte[] ToBytes()
 		{
 			if (IsString())
 				return Encoding.UTF8.GetBytes(stringBody);
 			return bodyAsBytes;
 		}
 
-		public bool IsString()
+		public virtual bool IsString()
 		{
 			return stringBody != null;
 		}

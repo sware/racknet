@@ -8,7 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AspAdapter", "AspAdapter\", "{A5FB5D09-61CA-4AAB-9A89-4C97759E1898}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFramework = "3.5"
-		ProjectReferences = "{6023BC6F-6DFB-4A5F-9D47-A14D9A184586}|Rack.Net.Tests.dll;{4A372718-1DB1-4700-A2B7-0EF221AE4D3C}|Rack.Net.dll;{F70C9A76-F797-4167-8178-14821F8634BC}|ApprovalTests.dll;"
+		ProjectReferences = "{6023BC6F-6DFB-4A5F-9D47-A14D9A184586}|Rack.Net.Tests.dll;{4A372718-1DB1-4700-A2B7-0EF221AE4D3C}|Rack.Net.dll;{F70C9A76-F797-4167-8178-14821F8634BC}|ApprovalTests.dll;{BFBCD024-E763-460A-8F36-7D262ED8746A}|Rack.Net.Utilities.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/AspAdapter"
 		Debug.AspNetCompiler.PhysicalPath = "AspAdapter\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AspAdapter\"

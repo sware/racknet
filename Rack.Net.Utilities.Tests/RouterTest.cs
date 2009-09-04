@@ -16,6 +16,15 @@ namespace Rack.Net.Utilities.Tests
 			Router.Prepare("/MyRackApp", app);
 			Assert.AreEqual(app,Router.LookUp("/MyRackApp"));
 		}
+
+		[Test]
+		public void SimpleInvoke()
+		{
+			var app = new InvokerRack();
+			var dictionary = new Dictionary<string,object>();
+			dictionary[RackHeader.URI] = "Rack.Net.Tests.MyRackApp";
+			Assert.AreEqual("Nice rack! (*)(*)",app.Call(dictionary).Body.ToString());
+		}
 	}
 
 	public  class Router : IRack
@@ -39,3 +48,4 @@ namespace Rack.Net.Utilities.Tests
 		}
 	}
 }
+
